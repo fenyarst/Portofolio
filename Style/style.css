@@ -635,7 +635,7 @@ main {
 .contact-grid {
     margin: 0;
     width: 100%;
-    height: fit-content;
+    height: 50rem;
     box-sizing: border-box;
     padding: 0;
     display: flex;
