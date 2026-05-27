@@ -6,8 +6,8 @@
 }
 
 html {
-    width: 100vw;
-    height: 100%;
+    width: 100dvw;
+    height: 100dvh;
     font-size: 62.5%;
     overflow: hidden;
 }
@@ -20,7 +20,7 @@ body {
         "footer";
     grid-template-rows: clamp(56px, 8vh, 80px) 1fr auto;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     scroll-behavior: smooth !important;
     background: linear-gradient(180deg,
@@ -178,6 +178,8 @@ p {
 }
 
 .hero-title {
+    margin: 0;
+    padding: 1.6rem;
     z-index: 10;
     width: 100%;
     height: 100%;
@@ -187,6 +189,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .hero-title h1 {
@@ -749,6 +752,15 @@ main {
     gap: 1.2rem;
     font-size: clamp(1.5rem, 1.8vw, 2.4rem);
     color: var(--dark-green);
+
+    a:first-child {
+        background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    a:nth-child(2) {
+        color: #FF0000;
+    }
 }
 
 .form-group {
@@ -1012,18 +1024,19 @@ main {
 
 footer {
     grid-area: footer;
-    padding: 0;
+    padding: 0.8rem 1.2rem;
     margin: 0;
-    height: clamp(2rem, 2.8rem, 4rem);
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--dark-green);
     color: var(--light-gray);
+    box-sizing: border-box;
 
     span {
         margin: 0;
-        padding: 0.6rem;
+        padding: 0;
         font-size: clamp(0.8rem, 2.2vw, 1.4rem);
     }
 }
@@ -1115,10 +1128,10 @@ footer {
 }
 
 @media (max-width: 533px) {
-    .contact-info-grid
-    {
+    .contact-info-grid {
         height: fit-content;
     }
+
     .contact-socials-grid {
         display: flex;
         flex-direction: column;
